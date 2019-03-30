@@ -12,6 +12,8 @@
     "docz-theme-default": "^1.0.0-rc.4"
   },
   "scripts": {
+    "docz:dev": "docz dev",
+    "docz:build": "docz build",
     "test": "npm test"
   },
   "author": "Ohans Emmanuel",
