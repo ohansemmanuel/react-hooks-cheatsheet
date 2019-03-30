@@ -1,4 +1,8 @@
 {
+  "name": "hooks-cheatsheet",
+  "version": "1.0.0",
+  "description": "Cheatsheet for React Hooks",
+  "main": "index.js",
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
@@ -6,5 +10,10 @@
   "devDependencies": {
     "docz": "^1.0.0-rc.4",
     "docz-theme-default": "^1.0.0-rc.4"
-  }
+  },
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "Ohans Emmanuel",
+  "license": "ISC"
 }
