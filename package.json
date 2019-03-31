@@ -4,8 +4,11 @@
   "description": "Cheatsheet for React Hooks",
   "main": "index.js",
   "dependencies": {
+    "polished": "^3.2.0",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "react-live": "1.10.0",
+    "styled-components": "^4.2.0"
   },
   "devDependencies": {
     "docz": "^1.0.0-rc.4",
