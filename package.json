@@ -7,6 +7,7 @@
     "polished": "^3.2.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-element-to-jsx-string": "^14.0.2",
     "react-live": "1.10.0",
     "styled-components": "^4.2.0"
   },

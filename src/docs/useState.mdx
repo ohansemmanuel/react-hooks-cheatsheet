@@ -1,11 +1,10 @@
 ---
 name: useState
 ---
-
-import { Playground, Props } from 'docz'
 import Editor from '../components/Editor'
-import {pfcExample, Button} from '../components/useState'
-import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
+import {DeclareStateVar, UpdateStateVar, MultipleStateVars, StateObject} from '../components/examples/useState'
+import {useState} from "react"
+
 
 
 
@@ -13,6 +12,15 @@ import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
  
 
 ## Declare State Variable 
-<Editor code={pfcExample}/>
+<Editor code={DeclareStateVar}/>
 
+
+## Update State Variable
+<Editor code={UpdateStateVar} />
+
+## Multiple State Variables 
+<Editor code={MultipleStateVars} />
+
+## Use Object State Variable
+<Editor code={StateObject} />
 

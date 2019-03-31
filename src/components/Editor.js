@@ -1,4 +1,11 @@
-import React from 'react'
+import React, {
+  useState,
+  useEffect,
+  useCallback,
+  useMemo,
+  useReducer,
+  useRef
+} from 'react'
 import styled, { css } from 'styled-components'
 import * as polished from 'polished'
 import { foreground, red, lightGrey } from '../utils/colors'
@@ -67,9 +74,18 @@ const StyledError = styled(LiveError)`
   font-family: 'Source Code Pro', monospace;
 `
 
+const defaultScope = {
+  useState,
+  useEffect,
+  useMemo,
+  useReducer,
+  useRef,
+  useCallback
+}
+
 const Editor = ({ noInline, code }) => (
   <StyledProvider>
-    <LiveProvider code={code} noInline={noInline}>
+    <LiveProvider code={code} scope={defaultScope} noInline={noInline}>
       <LiveWrapper>
         <StyledEditor>
           <LiveEditor />
