@@ -2,7 +2,7 @@
 name: useState
 ---
 import Editor from '../components/Editor'
-import {DeclareStateVar, UpdateStateVar, MultipleStateVars, StateObject} from '../components/examples/useState'
+import {DeclareStateVar, UpdateStateVar, MultipleStateVars, StateObject, StateFromFn} from '../components/examples/useState'
 import {useState} from "react"
 
 
@@ -14,7 +14,6 @@ import {useState} from "react"
 ## Declare State Variable 
 <Editor code={DeclareStateVar}/>
 
-
 ## Update State Variable
 <Editor code={UpdateStateVar} />
 
@@ -22,5 +21,9 @@ import {useState} from "react"
 <Editor code={MultipleStateVars} />
 
 ## Use Object State Variable
+You have to pass the entire object to the `useState` updater function as the object is replaced NOT merged. 
 <Editor code={StateObject} />
+
+## Initialize State from Function 
+<Editor code={StateFromFn} />
 

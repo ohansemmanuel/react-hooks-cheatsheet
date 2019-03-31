@@ -68,4 +68,19 @@ const StateObject = `() => {
   )
 }`
 
-export { DeclareStateVar, UpdateStateVar, MultipleStateVars, StateObject }
+const StateFromFn = `() => {
+  const [token] = useState(() => {
+    let token = window.localStorage.getItem("my-token");
+    return token || "default#-token#"
+  })
+
+  return <div>Token is {token}</div>
+}`
+
+export {
+  DeclareStateVar,
+  UpdateStateVar,
+  MultipleStateVars,
+  StateObject,
+  StateFromFn
+}
