@@ -1,12 +1,12 @@
 export default {
   title: 'Hooks Cheatsheet',
   description: 'Cheatsheet for React Hooks',
-  repository: 'https://github.com/',
+  repository: 'https://github.com/ohansemmanuel/react-hooks-cheatsheet',
   indexHtml: 'docs/index.html',
   ordering: 'ascending',
   propsParser: false,
   themeConfig: {
-    repository: 'https://github.com/',
+    repository: 'https://github.com/ohansemmanuel/react-hooks-cheatsheet',
     colors: {
       primary: '#bd4932',
       link: '#bd4932'
