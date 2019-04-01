@@ -3,7 +3,8 @@ export default {
   description: 'Cheatsheet for React Hooks',
   repository: 'https://github.com/ohansemmanuel/react-hooks-cheatsheet',
   indexHtml: 'src/index.html',
-  menu: ['useState', 'useEffect'],
+  menu: ['Home', 'useState', 'useEffect'],
+  wrapper: 'src/docs/config/Wrapper.js',
   ordering: 'ascending',
   propsParser: false,
   themeConfig: {
