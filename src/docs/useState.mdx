@@ -3,7 +3,14 @@ name: useState
 route: /use-state
 ---
 import Editor from '../components/Editor'
-import {DeclareStateVar, UpdateStateVar, MultipleStateVars, StateObject, StateFromFn} from '../components/examples/useState'
+import {
+    DeclareStateVar, 
+    UpdateStateVar, 
+    MultipleStateVars, 
+    StateObject, 
+    StateFromFn,
+    CounterFnSetState
+} from '../components/examples/useState'
 import {useState} from "react"
 
 
@@ -31,3 +38,15 @@ You have to pass the entire object to the `useState` updater function as the obj
 ## Initialize State from Function 
 <Editor code={StateFromFn} />
 
+## Functional setState 
+The function returned for updating state can also take a function similar to the good ol' `setState`. 
+
+```js
+ const [value, updateValue] = useState(0)
+ // both forms below are valid 👇
+ updateValue(1)
+ updateValue(previousValue => previousValue + 1)
+```
+This is ideal when the state update depends on some previous value of state. 
+
+<Editor code={CounterFnSetState} />

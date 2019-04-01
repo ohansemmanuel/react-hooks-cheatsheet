@@ -56,7 +56,7 @@ const ArrayDep = `() => {
 
   useEffect(
     () => {
-      setEffectLogs([...effectLogs, 'effect fn has been invoked'])
+      setEffectLogs(prevEffectLogs => [...prevEffectLogs, 'effect fn has been invoked'])
     },
     [randomNumber]
   )
@@ -86,7 +86,7 @@ const ArrayDepMount = `() => {
 
   useEffect(
     () => {
-      setEffectLogs([...effectLogs, 'effect fn has been invoked'])
+      setEffectLogs(prevEffectLogs => [...prevEffectLogs, 'effect fn has been invoked'])
     },
     []
   )
