@@ -34,13 +34,15 @@ import {useState} from "react"
 
 ## Skipping Effects (Array Dependency)
 In this example, `useEffect` is passed an array with one value, `[randomNumber]`
-Hence, the effect function will be called whenever a new "randomNumber" is generated. 
+Hence, the effect function will be called on mount **and** whenever a new "randomNumber" is generated. 
+
 Click the "Generate random number" button to see this. 
 
 <Editor code={ArrayDep}/>
 
 ## Skipping Effects (Empty Array Dependency )
 In this example, `useEffect` is passed an empty array, `[]`. Hence, the effect function will be called only on mount. 
+
 Click the button and you'll see that the effect function isn't invoked. 
 
 <Editor code={ArrayDepMount}/>
