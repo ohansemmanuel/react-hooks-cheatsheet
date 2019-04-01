@@ -44,3 +44,12 @@ In this example, `useEffect` is passed an empty array, `[]`. Hence, the effect f
 Click the button and you'll see that the effect function isn't invoked. 
 
 <Editor code={ArrayDepMount}/>
+
+## Skipping Effects (No array dependency)
+Without an array dependency, the effect function will be run after every single render. 
+
+```js
+useEffect(() => {
+  console.log("This will be logged after every render!")
+})
+```
