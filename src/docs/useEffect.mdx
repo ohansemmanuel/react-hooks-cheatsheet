@@ -5,7 +5,11 @@ name: useEffect
 
 import Editor from '../components/Editor'
 import { 
-    BasicEffect, 
+    BasicEffect,
+    EffectCleanup,
+    MultipleEffects,
+    ArrayDep,
+    ArrayDepMount
 } from '../components/examples/useEffect'
 import {useState} from "react"
 
@@ -22,10 +26,20 @@ import {useState} from "react"
 <Editor code={BasicEffect}/>
 
 ## Effect with Cleanup 
-<Editor code={BasicEffect}/>
+<Editor code={EffectCleanup}/>
 
 ## Multiple Effects 
-<Editor code={BasicEffect}/>
+<Editor code={MultipleEffects}/>
 
 ## Skipping Effects (Array Dependency)
-<Editor code={BasicEffect}/>
+In this example, `useEffect` is passed an array with one value, `[randomNumber]`
+Hence, the effect function will be called whenever a new "randomNumber" is generated. 
+Click the "Generate random number" button to see this. 
+
+<Editor code={ArrayDep}/>
+
+## Skipping Effects (Empty Array Dependency )
+In this example, `useEffect` is passed an empty array, `[]`. Hence, the effect function will be called only on mount. 
+Click the button and you'll see that the effect function isn't invoked. 
+
+<Editor code={ArrayDepMount}/>

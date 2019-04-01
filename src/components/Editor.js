@@ -90,11 +90,11 @@ const Editor = ({ noInline, code }) => (
         <StyledEditor>
           <LiveEditor />
         </StyledEditor>
-        <StyledError />
         <StyledPreview>
           <LivePreview />
         </StyledPreview>
       </LiveWrapper>
+      <StyledError />
     </LiveProvider>
   </StyledProvider>
 )

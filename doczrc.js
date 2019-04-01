@@ -2,7 +2,7 @@ export default {
   title: 'Hooks Cheatsheet',
   description: 'Cheatsheet for React Hooks',
   repository: 'https://github.com/ohansemmanuel/react-hooks-cheatsheet',
-  indexHtml: 'docs/index.html',
+  indexHtml: 'src/index.html',
   ordering: 'ascending',
   propsParser: false,
   themeConfig: {
