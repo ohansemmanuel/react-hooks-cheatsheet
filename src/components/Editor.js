@@ -2,6 +2,7 @@ import React, {
   useState,
   useEffect,
   useCallback,
+  useContext,
   useMemo,
   useReducer,
   useRef
@@ -80,7 +81,8 @@ const defaultScope = {
   useMemo,
   useReducer,
   useRef,
-  useCallback
+  useCallback,
+  useContext
 }
 
 const Editor = ({ noInline, code }) => (
