@@ -17,7 +17,7 @@ const EffectCleanup = `() => {
     const clicked = () => console.log('window clicked')
     window.addEventListener('click', clicked)
 
-    // return a function
+    // return a clean-up function
     return () => {
       window.removeEventListener('click', clicked)
     }
