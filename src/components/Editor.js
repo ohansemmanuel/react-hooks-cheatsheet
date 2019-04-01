@@ -1,6 +1,7 @@
 import React, {
   useState,
   useEffect,
+  useLayoutEffect,
   useCallback,
   useContext,
   useMemo,
@@ -78,6 +79,7 @@ const StyledError = styled(LiveError)`
 const defaultScope = {
   useState,
   useEffect,
+  useLayoutEffect,
   useMemo,
   useReducer,
   useRef,
