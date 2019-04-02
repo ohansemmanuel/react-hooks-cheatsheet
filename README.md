@@ -1,5 +1,5 @@
 <h1 align="center">
-  <a target="_blank" href="http://react-hooks-cheatsheet.com">
+  <a target="_blank" href="http://react-hooks-cheatsheet.surge.sh/">
     <img src="https://i.imgur.com/RELWys6.png" alt="react-hooks-cheatsheet" title="react-hooks-cheatsheet" width="300">
   </a>
 </h1>
@@ -20,7 +20,7 @@
 <br />
 <br />
 <p align="center" style="font-weight: bold">
-  <a target="_blank" href="http://react-hooks-cheatsheet.com">
+  <a target="_blank" href="http://react-hooks-cheatsheet.surge.sh/">
     👉🏿👉🏿👉🏿 Get Started 
   </a>
 </p>
