@@ -7,6 +7,8 @@ route: /usereducer
 import Editor from '../components/Editor'
 import { 
     BasicExample,
+    InitLazy,
+    ImitateSetState
 } from '../components/examples/useReducer'
 
 
@@ -23,3 +25,17 @@ import {
 <Editor noInline code={BasicExample}/>
 
 ## Initialize State Lazily 
+`useReducer` takes a third function parameter. This function will be called with  
+`initialState` - the second parameter. You may initialize state from this function. 
+Whatever's returned from this function is returned as the state object.
+
+<Editor noInline code={InitLazy}/>
+
+
+## Imitate setState's behaviour 
+`useReducer` uses a reducer that isn't as strict as Redux's e.g. the second parameter passed 
+to the reducer, `action` doesn't have to have a `type` property. 
+This allows for interesting manipulations such as renaming the parameter and doing the following: 
+
+<Editor noInline code={ImitateSetState}/>
+

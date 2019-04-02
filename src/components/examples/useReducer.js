@@ -15,7 +15,7 @@ const Bar = () => {
   return <>
     <div style={{ background: 'teal', height: '30px', width: state.width }}></div>
     <div style={{marginTop: '3rem'}}>
-        <button onClick={() => dispatch('plus')}>Increae bar size</button>
+        <button onClick={() => dispatch('plus')}>Increase bar size</button>
         <button onClick={() => dispatch('minus')}>Decrease bar size</button>
     </div>
     </>
@@ -23,6 +23,10 @@ const Bar = () => {
 render(Bar)`
 
 const InitLazy = `
+const initializeState = () => ({
+  width: 100
+})
+// ✅note how the value returned from the fn overrides initialState
 const initialState = { width: 15 }
 const reducer = (state, action) => {
   switch (action) {
@@ -36,15 +40,57 @@ const reducer = (state, action) => {
 }
 
 const Bar = () => {
-  const [state, dispatch] = useReducer(reducer, initialState)
+  const [state, dispatch] = useReducer(reducer, initialState, initializeState)
   return <>
     <div style={{ background: 'teal', height: '30px', width: state.width }}></div>
     <div style={{marginTop: '3rem'}}>
-        <button onClick={() => dispatch('plus')}>Increae bar size</button>
+        <button onClick={() => dispatch('plus')}>Increase bar size</button>
         <button onClick={() => dispatch('minus')}>Decrease bar size</button>
     </div>
     </>
 }
 render(Bar)`
 
-export { BasicExample }
+const ImitateSetState = `
+const initialState = { width: 15 }
+const reducer = (state, newState) => ({
+  ...state,
+  width: newState.width
+})
+
+const Bar = () => {
+  const [state, setState] = useReducer(reducer, initialState)
+  return <>
+    <div style={{ background: 'teal', height: '30px', width: state.width }}></div>
+    <div style={{marginTop: '3rem'}}>
+        <button onClick={() => setState({width: 100})}>Increase bar size</button>
+        <button onClick={() => setState({width: 3})}>Decrease bar size</button>
+    </div>
+    </>
+}
+render(Bar)`
+
+const initialState = { width: 15 }
+const reducer = (state, newState) => ({
+  ...state,
+  newState
+})
+
+const Bar = () => {
+  const [state, setState] = useReducer(reducer, initialState)
+  return (
+    <>
+      <div style={{ background: 'teal', height: '30px', width: state.width }} />
+      <div style={{ marginTop: '3rem' }}>
+        <button onClick={() => setState({ width: 100 })}>
+          Increase bar size
+        </button>
+        <button onClick={() => setState({ width: 3 })}>
+          Decrease bar size
+        </button>
+      </div>
+    </>
+  )
+}
+
+export { BasicExample, InitLazy, ImitateSetState }
