@@ -8,10 +8,10 @@ const Hero = () => {
         src={Logo}
         alt='react hooks cheatsheet'
         style={{
-          width: '70%',
+          width: '60%',
           maxWidth: '100%',
           display: 'block',
-          margin: '0 auto'
+          margin: '50px auto'
         }}
       />
     </div>
