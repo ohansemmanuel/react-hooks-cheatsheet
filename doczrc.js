@@ -9,7 +9,8 @@ export default {
     'useEffect',
     'useContext',
     'useLayoutEffect',
-    'useReducer'
+    'useReducer',
+    'useCallback'
   ],
   wrapper: 'src/docs/config/Wrapper.js',
   ordering: 'ascending',
