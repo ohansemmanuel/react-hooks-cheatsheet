@@ -4,23 +4,34 @@ route: /usecallback
 ---
 
 import Editor from "../components/Editor";
-import { StarterExample } from "../components/examples/useCallback";
+import {
+  Starter,
+  ReferencedFn,
+  InlineFn
+} from "../components/examples/useCallback";
 
 # useCallback 👁
 
-> Say something sensible, and add link to doc
+> `useCallback` returns a [memoized](https://en.wikipedia.org/wiki/Memoization) callback. [View Docs](https://reactjs.org/docs/hooks-reference.html#usecallback)
 
-## Basic Example to be refactored
+## Basic Example
 
-<Editor noInline code={StarterExample} />
+<Editor noInline code={Starter} />
 
 Note in the example above that the parent component, `<Age />` is updated (and re-rendered) whenever there's
 an update to age i.e when you click the "Get older" button.
-Owing to that, the `<Instructions />` component is also re-rendered because the `doSomething` prop is passed a
+Owing to that, the `<Instructions />` child component is also re-rendered because the `doSomething` prop is passed a
 new callback, with a new reference.
+
+> NB: Even though the `Instructions` child component uses React.memo to optimize performace, it is still re-rendered.
 
 How can this be fixed? i.e prevent `<Instructions />` from re-rendering needlessly?
 
+## useCallback with referenced function
+
+<Editor noInline code={ReferencedFn} />
+
 ## useCallback with inline function
 
-## useCallback with referenced function
+<Editor noInline code={InlineFn} />
+`useCallback` works with an inline function as well.
