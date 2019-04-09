@@ -12,8 +12,8 @@
     "styled-components": "^4.2.0"
   },
   "devDependencies": {
-    "docz": "^1.0.0-rc.4",
-    "docz-theme-default": "^1.0.0-rc.4"
+    "docz": "1.0.0-rc.8",
+    "docz-theme-default": "1.0.0-rc.8"
   },
   "scripts": {
     "docz:dev": "docz dev",
