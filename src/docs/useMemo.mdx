@@ -1,0 +1,30 @@
+---
+name: useMemo
+route: /usememo
+---
+
+import Editor from "../components/Editor";
+import { Starter, Basic } from "../components/examples/useMemo";
+
+# useMemo 🎒
+
+> Notes:
+ - useMemo returns a memoized value
+ - [View docs](https://reactjs.org/docs/hooks-reference.html#usememo)
+
+## Starter Example
+
+<Editor noInline code={Starter} />
+
+The example above is similar to the one for `useCallback`. The only difference here
+is that `someValue` is an object NOT a string. Owing to this, the `Instructions`
+component still re-renders. Why? Objects are compared by reference, and the reference changes
+whenever `<App />` re-renders.
+
+Any solutions?
+
+## Basic Usage
+
+The object, `someValue` may be memoized using `useMemo`. This prevents the needless re-render.
+
+<Editor noInline code={Basic} />
