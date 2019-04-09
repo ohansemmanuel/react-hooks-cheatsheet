@@ -1,0 +1,49 @@
+---
+name: useRef
+route: /useRef
+---
+
+import Editor from "../components/Editor";
+import { AccessDOM, HoldStringVal } from "../components/examples/useRef";
+
+# useRef 🌂
+
+> 
+ - returns a ref object.  
+ - values are accessed from the `.current` property of the returned object. 
+ - The`.current` property could be initialised to an initial value e.g. 
+   `useRef(initialValue)`
+ - The object is persisted for the entire lifetime of the component. 
+ - [View docs](https://reactjs.org/docs/hooks-reference.html#useref)
+ 
+## Accessing the DOM
+
+<Editor code={AccessDOM} />
+
+## Instance Like Variables  (Generic Container)
+
+Other than just holding DOM refs, the "ref" object can hold any value.
+
+<Editor code={HoldStringVal} />
+
+You could do the same as storing the return value from a `setInterval` for cleanup.
+
+```js
+function TimerWithRefID() {
+  const setIntervalRef = useRef();
+
+  useEffect(() => {
+    const intervalID = setInterval(() => {
+      // something to be done every 100ms
+    }, 100);
+
+    // this is where the interval ID is saved in the ref object 
+    setIntervalRef.current = intervalID;
+    return () => {
+      clearInterval(setIntervalRef.current);
+    };
+  });
+
+
+}
+```

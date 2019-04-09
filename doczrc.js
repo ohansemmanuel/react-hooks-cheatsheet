@@ -11,7 +11,8 @@ export default {
     'useLayoutEffect',
     'useReducer',
     'useCallback',
-    'useMemo'
+    'useMemo',
+    'useRef'
   ],
   wrapper: 'src/docs/config/Wrapper.js',
   ordering: 'ascending',
