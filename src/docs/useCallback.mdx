@@ -3,19 +3,24 @@ name: useCallback
 route: /usecallback
 ---
 
-import Editor from '../components/Editor'
-import { 
-    StarterExample,
-} from '../components/examples/useCallback'
+import Editor from "../components/Editor";
+import { StarterExample } from "../components/examples/useCallback";
 
+# useCallback 👁
 
-# useCallback 👁 
 > Say something sensible, and add link to doc
 
-## Basic Example without useCallback 
+## Basic Example to be refactored
+
 <Editor noInline code={StarterExample} />
 
+Note in the example above that the parent component, `<Age />` is updated (and re-rendered) whenever there's
+an update to age i.e when you click the "Get older" button.
+Owing to that, the `<Instructions />` component is also re-rendered because the `doSomething` prop is passed a
+new callback, with a new reference.
 
-## useCallback with inline function 
+How can this be fixed? i.e prevent `<Instructions />` from re-rendering needlessly?
+
+## useCallback with inline function
 
 ## useCallback with referenced function
