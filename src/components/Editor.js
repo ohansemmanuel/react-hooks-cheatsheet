@@ -8,19 +8,19 @@ import React, {
   useReducer,
   useRef,
   memo
-} from "react";
-import styled, { css } from "styled-components";
-import * as polished from "polished";
-import { foreground, red, lightGrey } from "../utils/colors";
+} from 'react'
+import styled, { css } from 'styled-components'
+import * as polished from 'polished'
+import { foreground, red, lightGrey } from '../utils/colors'
 
-import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 
 const StyledProvider = styled.div`
   border-radius: ${polished.rem(3)};
   box-shadow: 1px 1px 20px rgba(20, 20, 20, 0.27);
   overflow: hidden;
   margin-bottom: ${polished.rem(100)};
-`;
+`
 
 const LiveWrapper = styled.div`
   display: flex;
@@ -30,7 +30,7 @@ const LiveWrapper = styled.div`
   @media (max-width: 600px) {
     flex-direction: column;
   }
-`;
+`
 
 const column = css`
   flex-basis: 50%;
@@ -41,20 +41,20 @@ const column = css`
     width: 100%;
     max-width: 100%;
   }
-`;
+`
 
 const StyledEditor = styled.div`
   background: ${lightGrey};
-  font-family: "Source Code Pro", monospace;
+  font-family: 'Source Code Pro', monospace;
   font-size: ${polished.rem(14)};
-  height: ${polished.rem(350)};
-  max-height: ${polished.rem(350)};
+  height: ${props => (props.autoEditorHeight ? 'auto' : polished.rem(350))};
+  max-height: auto;
   overflow: auto;
   ${column};
   * > textarea:focus {
     outline: none;
   }
-`;
+`
 
 const StyledPreview = styled.div`
   position: relative;
@@ -64,7 +64,7 @@ const StyledPreview = styled.div`
   height: auto;
   overflow: hidden;
   ${column};
-`;
+`
 
 const StyledError = styled(LiveError)`
   display: block;
@@ -74,8 +74,8 @@ const StyledError = styled(LiveError)`
   white-space: pre-wrap;
   text-align: left;
   font-size: 0.9em;
-  font-family: "Source Code Pro", monospace;
-`;
+  font-family: 'Source Code Pro', monospace;
+`
 
 const defaultScope = {
   useState,
@@ -87,13 +87,13 @@ const defaultScope = {
   useCallback,
   useContext,
   memo
-};
+}
 
-const Editor = ({ noInline, code }) => (
+const Editor = ({ noInline, code, autoEditorHeight }) => (
   <StyledProvider>
     <LiveProvider code={code} scope={defaultScope} noInline={noInline}>
       <LiveWrapper>
-        <StyledEditor>
+        <StyledEditor autoEditorHeight={autoEditorHeight}>
           <LiveEditor />
         </StyledEditor>
         <StyledPreview>
@@ -103,6 +103,6 @@ const Editor = ({ noInline, code }) => (
       <StyledError />
     </LiveProvider>
   </StyledProvider>
-);
+)
 
-export default Editor;
+export default Editor

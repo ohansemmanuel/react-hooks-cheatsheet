@@ -12,7 +12,8 @@ export default {
     'useReducer',
     'useCallback',
     'useMemo',
-    'useRef'
+    'useRef',
+    'Examples'
   ],
   wrapper: 'src/docs/config/Wrapper.js',
   ordering: 'ascending',
