@@ -18,7 +18,7 @@
   "scripts": {
     "start": "docz dev",
     "build": "docz build",
-    "surge": "yarn run docz:build && npx surge .docz/dist react-hooks-cheatsheet.surge.sh",
+    "surge": "yarn run build && npx surge .docz/dist react-hooks-cheatsheet.surge.sh",
     "test": "npm test"
   },
   "author": "Ohans Emmanuel",
