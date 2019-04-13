@@ -16,8 +16,9 @@
     "docz-theme-default": "1.0.0-rc.8"
   },
   "scripts": {
-    "docz:dev": "docz dev",
-    "docz:build": "docz build",
+    "start": "docz dev",
+    "build": "docz build",
+    "surge": "yarn run docz:build && npx surge .docz/dist react-hooks-cheatsheet.surge.sh",
     "test": "npm test"
   },
   "author": "Ohans Emmanuel",
