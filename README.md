@@ -3,9 +3,6 @@
     <img src="https://i.imgur.com/RELWys6.png" alt="react-hooks-cheatsheet" title="react-hooks-cheatsheet" width="300">
   </a>
 </h1>
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/cc3a5289-5e78-4db3-bea2-07e97ba73abb/deploy-status)](https://app.netlify.com/sites/react-hooks-cheatsheet/deploys)
-
 <p align="center" style="font-size: 1.2rem;">A Cheatsheet with live editable examples 💪</p>
 
 - A one-stop reference for the React hooks APIs
