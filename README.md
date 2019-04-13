@@ -19,6 +19,14 @@
 
 <br />
 <br />
+
+- includes examples 🙋‍
+
+<div>
+    <img src="https://i.imgur.com/xawWBNR.gif" style="max-width: 100%"/>
+</div>
+
+<br />
 <p align="center" style="font-weight: bold">
   <a target="_blank" href="http://react-hooks-cheatsheet.surge.sh/">
     👉🏿👉🏿👉🏿 Get Started 
