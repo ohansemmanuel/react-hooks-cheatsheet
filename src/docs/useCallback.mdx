@@ -14,9 +14,11 @@ import {
 
 > Notes:
  - `useCallback` returns a [memoized](https://en.wikipedia.org/wiki/Memoization) callback. 
- - [View Docs.](https://reactjs.org/docs/hooks-reference.html#usecallback)
+ -  View the [docs](https://reactjs.org/docs/hooks-reference.html#usecallback)
+
 
 ## Starter Example
+The following example will form the basis of the explanations and code snippets that follow.
 
 <Editor noInline code={Starter} />
 
@@ -33,7 +35,7 @@ How can this be fixed? i.e prevent `<Instructions />` from re-rendering needless
 <Editor noInline code={ReferencedFn} />
 
 ## useCallback with inline function
-`useCallback` works with an inline function as well.
+`useCallback` works with an inline function as well. Here's the same solution with a inline `useCallback` call.
 
 <Editor noInline code={InlineFn} />
 

@@ -26,7 +26,7 @@ const InitLazy = `
 const initializeState = () => ({
   width: 100
 })
-// ✅note how the value returned from the fn overrides initialState
+// ✅ note how the value returned from the fn above overrides initialState below: 
 const initialState = { width: 15 }
 const reducer = (state, action) => {
   switch (action) {
