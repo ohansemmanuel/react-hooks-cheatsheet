@@ -17,7 +17,7 @@
     },
     "scripts": {
         "start": "docz dev",
-        "build": "docz build && cp _redirects .docz/site",
+        "build": "docz build",
         "surge": "yarn run build && npx surge .docz/dist --domain https://react-hooks-cheatsheet.com",
         "test": "npm test"
     },
