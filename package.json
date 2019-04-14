@@ -1,26 +1,26 @@
 {
-  "name": "hooks-cheatsheet",
-  "version": "1.0.0",
-  "description": "Cheatsheet for React Hooks",
-  "main": "index.js",
-  "dependencies": {
-    "polished": "^3.2.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-element-to-jsx-string": "^14.0.2",
-    "react-live": "1.10.0",
-    "styled-components": "^4.2.0"
-  },
-  "devDependencies": {
-    "docz": "1.0.0-rc.8",
-    "docz-theme-default": "1.0.0-rc.8"
-  },
-  "scripts": {
-    "start": "docz dev",
-    "build": "docz build",
-    "surge": "yarn run build && npx surge .docz/dist --domain https://react-hooks-cheatsheet.com",
-    "test": "npm test"
-  },
-  "author": "Ohans Emmanuel",
-  "license": "ISC"
+    "name": "hooks-cheatsheet",
+    "version": "1.0.0",
+    "description": "Cheatsheet for React Hooks",
+    "main": "index.js",
+    "dependencies": {
+        "polished": "^3.2.0",
+        "react": "^16.8.6",
+        "react-dom": "^16.8.6",
+        "react-element-to-jsx-string": "^14.0.2",
+        "react-live": "1.10.0",
+        "styled-components": "^4.2.0"
+    },
+    "devDependencies": {
+        "docz": "1.0.0-rc.8",
+        "docz-theme-default": "1.0.0-rc.8"
+    },
+    "scripts": {
+        "start": "docz dev",
+        "build": "docz build",
+        "surge": "yarn run build && npx surge .docz/dist --domain https://react-hooks-cheatsheet.com",
+        "test": "npm test"
+    },
+    "author": "Ohans Emmanuel",
+    "license": "ISC"
 }
