@@ -13,7 +13,9 @@
     },
     "devDependencies": {
         "docz": "1.0.0-rc.8",
-        "docz-theme-default": "1.0.0-rc.8"
+        "docz-theme-default": "1.0.0-rc.8",
+        "eslint": "^5.16.0",
+        "prettier": "^1.17.0"
     },
     "scripts": {
         "start": "docz dev",
