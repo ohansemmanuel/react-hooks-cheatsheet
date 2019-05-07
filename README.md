@@ -20,7 +20,8 @@
 <br />
 <br />
 
-- includes examples 🙋‍
+## Examples 
+- includes live examples 🙋‍
 
 <div>
     <img src="https://i.imgur.com/xawWBNR.gif" style="max-width: 100%"/>
@@ -32,3 +33,12 @@
     👉🏿👉🏿👉🏿 Get Started 
   </a>
 </p>
+
+## Todos 
+- [x] Add example call signatures to all hooks 
+- [] Add more examples that explain interesting use cases from the official [Hooks FAQ](https://reactjs.org/docs/hooks-faq.html) 
+
+
+## Contributing 
+Contributions of any kind are welcome. If you wanna knock off any of the todos above, please feel free to issue a PR. 
+
