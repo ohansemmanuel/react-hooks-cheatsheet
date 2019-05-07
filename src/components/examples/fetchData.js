@@ -60,6 +60,7 @@ const fetchOnUserEvent = `() => {
 
   return (
     <>
+      <p>Click the buttons below to fetch data</p>
       <button
         onClick={() => setGender('male')}
         style={{ outline: gender === 'male' ? '1px solid' : 0 }}
@@ -115,6 +116,7 @@ const fetchOnUserEventAndLoading = `() => {
 
   return (
     <>
+      <p>Click the buttons below to fetch data</p>
       <button
         onClick={() => setGender('male')}
         style={{ outline: gender === 'male' ? '1px solid' : 0 }}
