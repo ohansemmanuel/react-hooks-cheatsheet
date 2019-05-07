@@ -41,4 +41,5 @@
 
 ## Contributing 
 Contributions of any kind are welcome. If you wanna knock off any of the todos above, please feel free to issue a PR. 
+Got an interesting idea for the cheatsheet? Issue a PR :) 
 
