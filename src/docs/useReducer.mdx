@@ -14,11 +14,13 @@ import {
 
 # useReducer 🦖
  
-> Notes: 
- - useReducer may be used as an alternative to useState. 
+Notes: 
+ - `useReducer` may be used as an alternative to useState. 
+ - Call signature: `const [state, dispatch] = useReducer(reducer, initialState, lazyInitFunction)`
  - Ideal for complex state logic  where there's a dependency on previous state values or *a lotta* state sub values
- - depending on your use case you may find useReducer to quite testable 
- - [View docs.](https://reactjs.org/docs/hooks-reference.html#usereducer) 
+ - Depending on your use case you may find useReducer to quite testable 
+ - View the [docs.](https://reactjs.org/docs/hooks-reference.html#usereducer) 
+--- 
 
 ## Basic Usage 
 As opposed to calling `useState`, call `useReducer` with a `reducer` and `initialState` as shown below. 

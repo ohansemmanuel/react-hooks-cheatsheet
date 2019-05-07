@@ -8,14 +8,17 @@ import { AccessDOM, HoldStringVal } from "../components/examples/useRef";
 
 # useRef 🌂
 
-> Notes
+Notes
  - returns a 'ref' object.  
+ - Call signature: `const refContainer = useRef(initialValueToBePersisted)`
+ - Value is persisted in the `refContainer.current` property. 
  - values are accessed from the `.current` property of the returned object. 
  - The`.current` property could be initialised to an initial value e.g. 
    `useRef(initialValue)`
  - The object is persisted for the entire lifetime of the component. 
- - [View docs.](https://reactjs.org/docs/hooks-reference.html#useref)
- 
+ - View the [docs.](https://reactjs.org/docs/hooks-reference.html#useref)
+--- 
+
 ## Accessing the DOM
 
 <Editor code={AccessDOM} />
