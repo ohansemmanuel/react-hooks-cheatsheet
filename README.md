@@ -36,7 +36,7 @@
 
 ## Todos 
 - [x] Add example call signatures to all hooks 
-- [] Add more examples that explain interesting use cases from the official [Hooks FAQ](https://reactjs.org/docs/hooks-faq.html) 
+- [ ] Add more examples that explain interesting use cases from the official [Hooks FAQ](https://reactjs.org/docs/hooks-faq.html) 
 
 
 ## Contributing 
