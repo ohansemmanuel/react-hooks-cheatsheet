@@ -28,8 +28,10 @@ const Age = ({ age, handleClick }) => {
 }
 
 const Instructions = memo((props) => {
+  const colors = ['blue', 'red', 'yellow'];
+  const randomColor = colors[Math.floor(Math.random() * colors.length)];
   return (
-    <div style={{ background: 'black', color: 'yellow', padding: "1rem" }}>
+    <div style={{ background: 'black', color: randomColor, padding: "1rem" }}>
       <p>Follow the instructions above as closely as possible</p>
     </div>
   )
@@ -38,7 +40,7 @@ const Instructions = memo((props) => {
 render (
   <App />
 )
-`.trim();
+`.trim()
 
 const ReferencedFn = `
 const App = () => {
@@ -70,15 +72,17 @@ const Age = ({ age, handleClick }) => {
 }
 
 const Instructions = memo((props) => {
+  const colors = ['blue', 'red', 'yellow'];
+  const randomColor = colors[Math.floor(Math.random() * colors.length)];
   return (
-    <div style={{ background: 'black', color: 'yellow', padding: "1rem" }}>
+    <div style={{ background: 'black', color: randomColor, padding: "1rem" }}>
       <p>Follow the instructions above as closely as possible</p>
     </div>
   )
 })
 
 render(<App />)
-`.trim();
+`.trim()
 
 const InlineFn = `
 const App = () => {
@@ -109,14 +113,16 @@ const Age = ({ age, handleClick }) => {
 }
 
 const Instructions = memo((props) => {
+  const colors = ['blue', 'red', 'yellow'];
+  const randomColor = colors[Math.floor(Math.random() * colors.length)];
   return (
-    <div style={{ background: 'black', color: 'yellow', padding: "1rem" }}>
+    <div style={{ background: 'black', color: randomColor, padding: "1rem" }}>
       <p>Follow the instructions above as closely as possible</p>
     </div>
   )
 })
 
 render(<App />)
-`.trim();
+`.trim()
 
-export { Starter, ReferencedFn, InlineFn };
+export { Starter, ReferencedFn, InlineFn }

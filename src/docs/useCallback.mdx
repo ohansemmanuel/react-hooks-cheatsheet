@@ -25,9 +25,9 @@ The following example will form the basis of the explanations and code snippets 
 
 In the example above, the parent component, `<Age />` is updated (and re-rendered) whenever the "Get older" button is clicked.
 Consequently, the `<Instructions />` child component is also re-rendered because the `doSomething` prop is passed a
-new callback, with a new reference.
+new callback, with a new reference. This can be seen from the random text colour which changes whenever the state value `age` is updated.
 
-> NB: Even though the `Instructions` child component uses `React.memo` to optimize performace, it is still re-rendered.
+> NB: Even though the `Instructions` child component uses `React.memo` to optimize performance, it is still re-rendered.
 
 How can this be fixed? i.e prevent `<Instructions />` from re-rendering needlessly?
 
@@ -39,5 +39,4 @@ How can this be fixed? i.e prevent `<Instructions />` from re-rendering needless
 `useCallback` works with an inline function as well. Here's the same solution with a inline `useCallback` call.
 
 <Editor noInline code={InlineFn} />
-
 
