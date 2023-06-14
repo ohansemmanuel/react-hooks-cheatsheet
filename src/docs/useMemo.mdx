@@ -3,27 +3,29 @@ name: useMemo
 route: /usememo
 ---
 
-import Editor from "../components/Editor";
-import { Starter, Basic } from "../components/examples/useMemo";
+import Editor from '../components/Editor'
+import { Starter, Basic } from '../components/examples/useMemo'
 
 # useMemo 🎒
 
 Notes:
- - `useMemo` returns a memoized value.
- - Call signature: `const memoizedValue = useMemo(functionThatReturnsValue, arrayDependencies)`
- - View the [docs.](https://reactjs.org/docs/hooks-reference.html#usememo)
---- 
+
+-   `useMemo` returns a memoized value.
+-   Call signature: `const memoizedValue = useMemo(functionThatReturnsValue, arrayDependencies)`
+-   View the [docs.](https://react.dev/reference/react/useMemo)
+
+---
 
 ## Starter Example
 
 <Editor noInline code={Starter} />
 
-The example above is similar to the one for [useCallback](/usecallback). 
+The example above is similar to the one for [useCallback](/usecallback).
 
-The only difference here is that `someValue` is an object NOT a string. 
+The only difference here is that `someValue` is an object NOT a string.
 Owing to this, the `Instructions` component still re-renders despite the use of `React.memo`.
 
-Why? 
+Why?
 
 Objects are compared by reference, and the reference to `someValue` changes whenever `<App />` re-renders.
 
