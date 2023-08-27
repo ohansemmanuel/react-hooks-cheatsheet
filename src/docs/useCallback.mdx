@@ -3,22 +3,25 @@ name: useCallback
 route: /usecallback
 ---
 
-import Editor from "../components/Editor";
+import Editor from '../components/Editor'
 import {
-  Starter,
-  ReferencedFn,
-  InlineFn
-} from "../components/examples/useCallback";
+    Starter,
+    ReferencedFn,
+    InlineFn,
+} from '../components/examples/useCallback'
 
 # useCallback 👁
 
 Notes:
- - `useCallback` returns a [memoized](https://en.wikipedia.org/wiki/Memoization) callback. 
- - Call signature: `const memoizedCallback = useCallback(function, arrayDependency)`
- -  View the [docs.](https://reactjs.org/docs/hooks-reference.html#usecallback)
---- 
+
+-   `useCallback` returns a [memoized](https://en.wikipedia.org/wiki/Memoization) callback.
+-   Call signature: `const memoizedCallback = useCallback(function, arrayDependency)`
+-   View the [docs.](https://react.dev/reference/react/useCallback)
+
+---
 
 ## Starter Example
+
 The following example will form the basis of the explanations and code snippets that follow.
 
 <Editor noInline code={Starter} />
@@ -36,7 +39,7 @@ How can this be fixed? i.e prevent `<Instructions />` from re-rendering needless
 <Editor noInline code={ReferencedFn} />
 
 ## useCallback with inline function
+
 `useCallback` works with an inline function as well. Here's the same solution with a inline `useCallback` call.
 
 <Editor noInline code={InlineFn} />
-
