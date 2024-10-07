@@ -13,6 +13,7 @@ export default {
     'useCallback',
     'useMemo',
     'useRef',
+    'useDebugValue',
     'Examples'
   ],
   wrapper: 'src/docs/config/Wrapper.js',
