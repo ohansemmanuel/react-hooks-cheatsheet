@@ -1,0 +1,44 @@
+---
+name: useDebugValue
+route: /useDebugValue
+---
+
+import Editor from '../components/Editor'
+import { useDebugValueCode } from '../components/examples/useDebugValue';
+
+# useDebugValue
+
+`useDebugValue` is a React Hook that lets you add a label to a custom hook in React DevTools.
+
+## Reference
+
+### `useDebugValue(value, format?)`
+
+Call `useDebugValue` at the top level of your [custom Hook](https://react.dev/learn/reusing-logic-with-custom-hooks) to display a readable debug value for React DevTools.
+
+#### Parameters
+
+* `value`: The value you want to display in React DevTools. It can be of any type.
+* `format?`: An optional formatting function. When DevTools needs to display the value, it will call this function and display the formatted result. This lets you do expensive formatting only when the hook is inspected.
+
+#### Returns
+
+`useDebugValue` does not return anything.
+
+## Usage
+
+### Adding a label to a custom Hook
+
+Call `useDebugValue` in a custom Hook to display a readable debug value for React DevTools.
+
+<Editor code={useDebugValueCode} />
+
+In this example:
+
+1. We define a component that manages a count and a date state using `useState`.
+2. The component has two functions, `increment` and `decrement`, which update both the count and date states.
+3. Inside these functions, we use `useDebugValue` to display the current count and date values in React DevTools.
+4. The component renders a simple interface with the current count, buttons to increment and decrement, and the current date.
+5. When you inspect this component in React DevTools, you'll see the debug value containing the current count and date for each state update.
+
+This example demonstrates how `useDebugValue` can provide real-time information about the internal state of a component, making it easier to track state changes and debug your application's behavior. It's particularly useful when you want to monitor multiple pieces of state simultaneously.
